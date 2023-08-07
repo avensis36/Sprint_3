@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from locators import PageLocators
 import random as r
 import string
+import data
 
 def random_email():
     email = f'antonermolaev12{r.randint(100,999)}@gmail.com'
@@ -21,7 +22,7 @@ def is_valid_email(email):
     pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
     return re.match(pattern, email) is not None
 
-name = 'Anton Ermolaev'
+
 email = random_email()
 password = random_password()
 
@@ -35,7 +36,7 @@ WebDriverWait(driver, 3).until(EC.visibility_of_element_located(PageLocators.LOG
 driver.find_element(*PageLocators.REGISTER_BUTTON_ON_LOGIN).click()
 
 WebDriverWait(driver, 3).until(EC.element_to_be_clickable(PageLocators.NAME_PLACEHOLDER))
-driver.find_element(*PageLocators.NAME_INPUT).send_keys(name)
+driver.find_element(*PageLocators.NAME_INPUT).send_keys(data.name)
 name_input = driver.find_element(*PageLocators.NAME_INPUT).get_attribute('value')
 assert name_input != '', 'Fill in the name'
 
