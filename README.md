@@ -18,7 +18,7 @@
 
 ## Тесты по переходу в личный кабинет
 
-Тест на переход по клику на «Личный кабинет» – `test_go_to_personal_account_through_personal_account_button_true.py`
+Тест на переход в личный кабинет по клику на «Личный кабинет» – `test_go_to_personal_account_through_personal_account_button_true.py`
 
 ## Тесты по переходу из личного кабинета в конструктор
 
