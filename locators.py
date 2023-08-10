@@ -14,9 +14,9 @@ class PageLocators:
     BUNS_SECTION_HEADER = (By.XPATH, ".//h2[text()='Булки']")  # Заголовок раздела булок
     SAUCES_SECTION_HEADER = (By.XPATH, ".//h2[text()='Соусы']")  # Заголовок раздела соусов
     TOPPINGS_SECTION_HEADER = (By.XPATH, ".//h2[text()='Начинки']")  # Заголовок раздела начинок
-    BUNS_SECTION_TAB = (By.XPATH, ".//main//div/div/span[text()='Булки']/parent::div")  # Таб секции булок
-    SAUCES_SECTION_TAB = (By.XPATH, ".//main//div/div/span[text()='Соусы']/parent::div")  # Таб секции соусов
-    TOPPINGS_SECTION_TAB = (By.XPATH, ".//main//div/div/span[text()='Начинки']/parent::div")  # Таб секции начинок
+    BUNS_SECTION_TAB = (By.XPATH, ".//span[text()='Булки']/parent::div")  # Таб секции булок
+    SAUCES_SECTION_TAB = (By.XPATH, ".//span[text()='Соусы']/parent::div")  # Таб секции соусов
+    TOPPINGS_SECTION_TAB = (By.XPATH, ".//span[text()='Начинки']/parent::div")  # Таб секции начинок
 
     LOGIN_HEADER = (By.XPATH, ".//h2[text()='Вход']")  # Заголовок "Вход" на странице входа
     LOGIN_BUTTON_ON_LOGIN = (By.XPATH, ".//button[text()='Войти']")  # Кнопка "Войти" на /login
